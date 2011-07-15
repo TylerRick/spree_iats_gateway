@@ -113,7 +113,7 @@ module ActiveMerchant #:nodoc:
           post[:FirstName]  = credit_card.first_name
           post[:LastName]   = credit_card.last_name
         end
-        post[:MOP]          = card_types[credit_card.type]
+        post[:MOP]          = card_types[credit_card.brand]
         # IATS requires 4111111111111111 for all test transactions
         post[:CCNum]        = test? ? "4111111111111111" : credit_card.number
         post[:CCExp]        = "#{format(credit_card.month, :two_digits)}/#{format(credit_card.year, :two_digits)}"

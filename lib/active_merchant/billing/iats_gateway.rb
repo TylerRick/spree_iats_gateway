@@ -41,7 +41,7 @@ module ActiveMerchant #:nodoc:
       self.supported_countries = ['CA', 'US']
       
       # The card types supported by the payment gateway
-      self.supported_cardtypes = [:visa, :master]
+      self.supported_cardtypes = [:visa, :master, :american_express, :discover]
       
       # The homepage URL of the gateway
       self.homepage_url = 'http://www.iats.ticketmaster.com/'

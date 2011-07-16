@@ -13,4 +13,7 @@ class Gateway::Iats < Gateway
     provider.purchase(money, credit_card, options)
   end
 
+  def void(response_code, creditcard, options = {})
+    ActiveMerchant::Billing::Response.new(false, "Iats Gateway: Void is not supported", {:error => "Iats Gateway: Void is not supported"})
+  end
 end
